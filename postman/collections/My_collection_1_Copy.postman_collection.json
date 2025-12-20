@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "2e0c1bdd-1630-441c-abdd-ac6fc1d9c564",
-    "name": "mock-api-reqres-Variables",
+    "name": "mock-api-Variables",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -13,7 +13,7 @@
           "script": {
             "id": "f6d54c77-d101-4183-b05c-539951e2bd6c",
             "exec": [
-              "//Local variable\r",
+              "//Local variable, limited for a single request\r",
               "pm.variables.set(\"url_local\", \"https://6942d9c569b12460f31309d6.mockapi.io\");\r",
               "//global variable\r",
               "pm.globals.set(\"userid_global\", \"2\");\r",
@@ -138,7 +138,7 @@
       "response": []
     },
     {
-      "name": "{{baseURL1}}/users/72",
+      "name": "update",
       "id": "06a43bf4-dc6e-4f6f-9381-c8c037e1254e",
       "request": {
         "auth": {
@@ -159,33 +159,6 @@
           "raw": "{{url_qa_env}}/api/users/1",
           "host": [
             "{{url_qa_env}}"
-          ],
-          "path": [
-            "api",
-            "users",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "{{baseURL1}}/users/72",
-      "id": "00989eae-7d16-4747-b0a4-b602a4fc92b0",
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "PATCH",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"avatar\": \"https://avatars.githubusercontent.com/u/87602577\",\r\n    \"id\": \"72\",\r\n    \"name\": \"sacar\",\r\n    \"role\": \"qa engineer\"\r\n}"
-        },
-        "url": {
-          "raw": "{{url_global}}/api/users/1",
-          "host": [
-            "{{url_global}}"
           ],
           "path": [
             "api",

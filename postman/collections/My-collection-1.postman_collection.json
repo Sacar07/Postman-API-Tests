@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "7a9df0eb-70a2-47b5-ad64-d867c8d252a6",
-    "name": "mock-api-reqres",
+    "name": "mock-api-ResponseValidations",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -161,63 +161,6 @@
           ],
           "path": [
             "users"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "{{baseURL1}}/users/72",
-      "id": "ba8d0aad-cc2d-4681-8c8e-6cef567a67db",
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "  {\r\n        \"username\": \"sacar\",\r\n        \"role\": \"qa\",\r\n        \"salary\": 90000,\r\n        \"id\": \"11\"\r\n    }",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "{{baseURL1}}/users/10",
-          "host": [
-            "{{baseURL1}}"
-          ],
-          "path": [
-            "users",
-            "10"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "{{baseURL1}}/users/72",
-      "id": "94954d2e-ee72-436e-a9cb-7ec421357f1e",
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "PATCH",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"avatar\": \"https://avatars.githubusercontent.com/u/87602577\",\r\n    \"id\": \"72\",\r\n    \"name\": \"sacar\",\r\n    \"role\": \"qa engineer\"\r\n}"
-        },
-        "url": {
-          "raw": "{{baseURL1}}/users/72",
-          "host": [
-            "{{baseURL1}}"
-          ],
-          "path": [
-            "users",
-            "72"
           ]
         }
       },
