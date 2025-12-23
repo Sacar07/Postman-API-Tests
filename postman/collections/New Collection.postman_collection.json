@@ -278,7 +278,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"bookId\" : 1,\r\n    \"customerName\": \"John\"\r\n}",
+          "raw": "{\r\n    \"bookId\" : 4,\r\n    \"customerName\": \"John\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -299,17 +299,44 @@
     },
     {
       "name": "Single Book",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "70534f5a-4d88-43ec-bfbd-0aa3eaf791fc",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "e09ad04a-5dfb-4c84-8d61-5bc6ab169e2a",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "id": "be6e053f-d6f1-4c04-adac-d0c363c8bd02",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://simple-books-api.glitch.me/books/1",
-          "protocol": "https",
+          "raw": "{{base_url}}/books/1",
           "host": [
-            "simple-books-api",
-            "glitch",
-            "me"
+            "{{base_url}}"
           ],
           "path": [
             "books",
@@ -321,6 +348,71 @@
     },
     {
       "name": "Get All Orders",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "683baba7-e8df-4e72-9937-84fcd4227356",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "861f5810-bf5e-4c2a-bbb0-631ee45c3c8e",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "const schema = {\r",
+              "    \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+              "    \"type\": \"array\",\r",
+              "    \"items\": [\r",
+              "        {\r",
+              "            \"type\": \"object\",\r",
+              "            \"properties\": {\r",
+              "                \"id\": {\r",
+              "                    \"type\": \"string\"\r",
+              "                },\r",
+              "                \"bookId\": {\r",
+              "                    \"type\": \"integer\"\r",
+              "                },\r",
+              "                \"customerName\": {\r",
+              "                    \"type\": \"string\"\r",
+              "                },\r",
+              "                \"quantity\": {\r",
+              "                    \"type\": \"integer\"\r",
+              "                },\r",
+              "                \"timestamp\": {\r",
+              "                    \"type\": \"integer\"\r",
+              "                }\r",
+              "            },\r",
+              "            \"required\": [\r",
+              "                \"id\",\r",
+              "                \"bookId\",\r",
+              "                \"customerName\",\r",
+              "                \"quantity\",\r",
+              "                \"timestamp\"\r",
+              "            ]\r",
+              "        }\r",
+              "    ]\r",
+              "}\r",
+              "\r",
+              "pm.test(\"schema validation\", () => {\r",
+              "    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "id": "d6d79fbe-52c3-4a05-ab46-850827c6fbb6",
       "request": {
         "auth": {
@@ -394,7 +486,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"customerName\": \"Sacar\"\r\n}",
+          "raw": "{\r\n    \"customerName\": \"uuuu\"\r\n}",
           "options": {
             "raw": {
               "language": "json"

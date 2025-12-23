@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "2b6d2eee-5af0-4486-8eb9-531d57e8842a",
+    "name": "File-Upload",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Single File Upload",
+      "id": "5229dc9b-f046-4db4-ae26-2ce3afbeb1db",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "b0d8d2ae-8577-4e6c-bc1a-64e71bce9196",
+              "src": [
+                "/C:/Users/ACER/Desktop/QA-Portfolio/.gitignore"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://postman-echo.com/post",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Multiple Files Upload",
+      "id": "818aa007-9d65-4b58-82ea-0a7281b3b91a",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "files",
+              "type": "file",
+              "uuid": "d770376d-606d-4fd9-8c18-cffd151d4e89",
+              "src": [
+                "/C:/Users/ACER/Desktop/QA-Portfolio/README.md",
+                "/C:/Users/ACER/Desktop/QA-Portfolio/.gitignore"
+              ]
+            }
+          ],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://postman-echo.com/post",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
