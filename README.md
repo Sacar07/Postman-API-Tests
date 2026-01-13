@@ -1,6 +1,6 @@
 # Project Overview
 
-## This repository contains comprehensive API testing projects performed using Postman on public demo APIs such as GoRest API, Books API and MockAPI. The purpose of this work is to demonstrate practical API testing skills including:
+### This repository contains comprehensive API testing projects performed using Postman on public demo APIs such as GoRest API, Books API and MockAPI. The purpose of this work is to demonstrate practical API testing skills including:
 
 1) Response validation with Postman assertions
 
@@ -16,7 +16,7 @@
 
 7) Negative and positive scenario coverage
 
-## Each collection in this repo includes structured test cases and assertions that validate expected behavior and support robust testing practices. Screenshots and evidence of execution are provided to showcase test results and logic.
+### Each collection in this repo includes structured test cases and assertions that validate expected behavior and support robust testing practices. Screenshots and evidence of execution are provided to showcase test results and logic.
 
 # Tools used:
 - Postman
