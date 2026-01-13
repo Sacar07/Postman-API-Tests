@@ -20,6 +20,8 @@
 
 # Tools used:
 - Postman
+- REST APIS
+- JSON
 - Chrome devTools
 - Github
   
