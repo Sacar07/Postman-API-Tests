@@ -15,6 +15,8 @@
 6) File upload testing
 
 7) Negative and positive scenario coverage
+   
+8) HTML Report of Test Summary with Newman 
 
 ### Each collection in this repo includes structured test cases and assertions that validate expected behavior and support robust testing practices. Screenshots and evidence of execution are provided to showcase test results and logic.
 
@@ -22,6 +24,7 @@
 - Postman
 - REST APIS
 - JSON
+- Newman
 - Chrome devTools
 - Github
   
